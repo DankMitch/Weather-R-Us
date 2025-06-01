@@ -213,8 +213,8 @@ const getWeatherForecast = (data) => {
     const sunriseTimeE = new Date(dailyForecast.sunrise * 1000)
     const sunsetE = document.querySelector(`#sunsetE${index}`)
     const sunsetTimeE = new Date(dailyForecast.sunset * 1000)
-    sunriseE.innerHTML = `<img src='./img/sunrise.png' height="25" alt="sunrise icon">${sunriseTimeE.toLocaleTimeString('en-US', {hour: 'numeric',minute: '2-digit',hour12: true})}`
-    sunsetE.innerHTML = `<img src='./img/sunset.png' height="25" alt="sunset icon">${sunsetTimeE.toLocaleTimeString('en-US', {hour: 'numeric',minute: '2-digit',hour12: true})}`
+    sunriseE.innerHTML = `<img src='/img/sunrise.png' height="25" alt="sunrise icon">${sunriseTimeE.toLocaleTimeString('en-US', {hour: 'numeric',minute: '2-digit',hour12: true})}`
+    sunsetE.innerHTML = `<img src='/img/sunset.png' height="25" alt="sunset icon">${sunsetTimeE.toLocaleTimeString('en-US', {hour: 'numeric',minute: '2-digit',hour12: true})}`
 
     // Humidity, Wind, Precip
     const humidityE = document.querySelector(`#humidityE${index}`)
@@ -223,7 +223,7 @@ const getWeatherForecast = (data) => {
     const directionE = getCompassDirection(dailyForecast.deg)
     windE.innerHTML =  `<span class="faded">Wind: </span>${Math.round(dailyForecast.speed)}mph ${directionE}`
     const precipE = document.querySelector(`#precipE${index}`)
-    precipE.innerHTML = `<i class="wi wi-raindrop pe-2"></i>${dailyForecast.pop}cm`
+    precipE.innerHTML = `<i class="wi wi-raindrop pe-2"></i>${Math.round(dailyForecast.pop * 100)}%`
     });
 
 }
