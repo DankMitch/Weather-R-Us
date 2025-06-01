@@ -234,7 +234,7 @@ document.querySelector('#getWeather').addEventListener('click', () => {
     let zipCode = document.querySelector('#zip').value
         
     // First call the geolocation API to get the latitude and longitude of the zip code
-    let url = `httpss://api.openweathermap.org/geo/1.0/zip?zip=${zipCode},US&appid=${API_KEY}`
+    let url = `https://api.openweathermap.org/geo/1.0/zip?zip=${zipCode},US&appid=${API_KEY}`
     
     fetch(url)
         .then(response => response.json())
