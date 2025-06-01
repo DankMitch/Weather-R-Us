@@ -234,7 +234,7 @@ document.querySelector('#getWeather').addEventListener('click', () => {
     let zipCode = document.querySelector('#zip').value
         
     // First call the geolocation API to get the latitude and longitude of the zip code
-    let url = `http://api.openweathermap.org/geo/1.0/zip?zip=${zipCode},US&appid=${API_KEY}`
+    let url = `httpss://api.openweathermap.org/geo/1.0/zip?zip=${zipCode},US&appid=${API_KEY}`
     
     fetch(url)
         .then(response => response.json())
@@ -244,7 +244,7 @@ document.querySelector('#getWeather').addEventListener('click', () => {
             const geo = getLatLon(data,zipCode)
             
             // Now get current weather data
-            url = `http://api.openweathermap.org/data/2.5/weather?lat=${geo[0]}&lon=${geo[1]}&appid=${API_KEY}&units=imperial`
+            url = `https://api.openweathermap.org/data/2.5/weather?lat=${geo[0]}&lon=${geo[1]}&appid=${API_KEY}&units=imperial`
             
             fetch(url)
                 .then(response => response.json())
@@ -264,7 +264,7 @@ document.querySelector('#getforecastbtn').addEventListener('click', () => {
     let zip = document.querySelector('#zip')
     zip = zip.value.trim()
 
-    let url = `http://api.openweathermap.org/geo/1.0/zip?zip=${zip}&appid=${API_KEY}`
+    let url = `https://api.openweathermap.org/geo/1.0/zip?zip=${zip}&appid=${API_KEY}`
 
     fetch(url)
     .then (response => response.json())
@@ -293,13 +293,13 @@ window.addEventListener('DOMContentLoaded', () => {
 
 // Use same code as getWeather
 function getCurrentWeatherByZip(zipCode) {
-    let url = `http://api.openweathermap.org/geo/1.0/zip?zip=${zipCode},US&appid=${API_KEY}`;
+    let url = `https://api.openweathermap.org/geo/1.0/zip?zip=${zipCode},US&appid=${API_KEY}`;
 
     fetch(url)
         .then(response => response.json())
         .then(data => {
             const geo = getLatLon(data, zipCode);
-            url = `http://api.openweathermap.org/data/2.5/weather?lat=${geo[0]}&lon=${geo[1]}&appid=${API_KEY}&units=imperial`;
+            url = `https://api.openweathermap.org/data/2.5/weather?lat=${geo[0]}&lon=${geo[1]}&appid=${API_KEY}&units=imperial`;
             return fetch(url);
         })
         .then(response => response.json())
@@ -313,7 +313,7 @@ function getCurrentWeatherByZip(zipCode) {
 
 // Use same code as getForecast
 function getForecastByZip(zip) {
-    let url = `http://api.openweathermap.org/geo/1.0/zip?zip=${zip}&appid=${API_KEY}`;
+    let url = `https://api.openweathermap.org/geo/1.0/zip?zip=${zip}&appid=${API_KEY}`;
 
     fetch(url)
     .then(response => response.json())
