@@ -72,12 +72,6 @@ body {
     color: white;
 }
 
-/* .temp-display {
-    font-size: 4rem;
+.temp {
+    font-size: 3rem;
 }
-
-@media (min-width: 992px) {
-    .temp-display {
-        font-size: 4rem;
-    }
-} */

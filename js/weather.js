@@ -158,35 +158,36 @@ const getWeatherForecast = (data) => {
     // insert HTML for daily forecast div
     data.list.forEach((dailyForecast, index) => {
     const forecastHTML = `                      
-        <div class="border-top border-2 border-white py-5">
+        <div class="border-top border-2 border-white py-5 px-0 mx-0">
+            <!-- Day Title -->
             <div class="row">
                 <div class="col-12 text-start">
-                    <p id="dayE${index}"></p>
+                    <p id="dayE${index}" class="mb-3"></p>
                 </div>
             </div>
-            <div class="row text-center">
-                <div class="col-2">
-                    <div id="iconE${index}" class="mx-auto"></div>
-                    <p id="precipE${index}" class="blue pt-4" alt="rain icon"></p>
+            <div class="row align-items-stretch text-center px-0 mx-0">
+                <div class="col-2 d-flex flex-column justify-content-between align-items-center">
+                        <div id="iconE${index}" class="mx-auto"></div>
+                        <div id="precipE${index}" class="blue" alt="rain icon"></div>
                 </div>
-            
-                <div class="col-4">
-                    <p id="currentTempE${index}" class="display-2"></p>
+                <div class="col-4 d-flex flex-column justify-content-between">
+                    <div>
+                        <p id="currentTempE${index}" class="display-4 mb-2"></p>
+                    </div>
                     <div class="d-flex justify-content-center gap-1">
-                        <p id="hiTempE${index}" class='red'></p>
-                        <p>|</p>
-                        <p id="loTempE${index}" class="blue"></p>
+                        <p id="hiTempE${index}" class="red mb-0"></p>
+                        <p class="mb-0">|</p>
+                        <p id="loTempE${index}" class="blue mb-0"></p>
                     </div>
                 </div>
-            
-                <div class="col-6 d-flex flex-column justify-content-center align-items-center">
+                <div class="col-6 d-flex flex-column justify-content-between">
                     <div>
-                        <p id="humidityE${index}"></p>
-                        <p id="windE${index}"></p>
+                        <p id="humidityE${index}" class="mb-2"></p>
+                        <p id="windE${index}" class="mb-0"></p>
                     </div>
                     <div class="d-flex gap-2 justify-content-center">
-                        <p id="sunriseE${index}" class="d-flex gap-1"></p>
-                        <p id="sunsetE${index}" class="d-flex gap-1"></p>
+                        <p id="sunriseE${index}" class="d-flex gap-1 mb-0"></p>
+                        <p id="sunsetE${index}" class="d-flex gap-1 mb-0"></p>
                     </div>
                 </div>
             </div>
@@ -213,9 +214,9 @@ const getWeatherForecast = (data) => {
     const currentTempE = document.querySelector(`#currentTempE${index}`)
     currentTempE.innerText = Math.round(dailyForecast.temp.day)
     const hiTempE = document.querySelector(`#hiTempE${index}`)
-    hiTempE.innerHTML = `${Math.round(dailyForecast.temp.max)}° F`
+    hiTempE.innerHTML = `${Math.round(dailyForecast.temp.max)} ° F`
     const loTempE = document.querySelector(`#loTempE${index}`)
-    loTempE.innerHTML = `${Math.round(dailyForecast.temp.min)}° F`
+    loTempE.innerHTML = `${Math.round(dailyForecast.temp.min)} ° F`
 
     // Sunrise & Sunset
     const sunriseE = document.querySelector(`#sunriseE${index}`)
