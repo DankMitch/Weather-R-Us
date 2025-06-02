@@ -214,9 +214,9 @@ const getWeatherForecast = (data) => {
     const currentTempE = document.querySelector(`#currentTempE${index}`)
     currentTempE.innerText = Math.round(dailyForecast.temp.day)
     const hiTempE = document.querySelector(`#hiTempE${index}`)
-    hiTempE.innerHTML = `${Math.round(dailyForecast.temp.max)} ° F`
+    hiTempE.innerHTML = `${Math.round(dailyForecast.temp.max)}° F`
     const loTempE = document.querySelector(`#loTempE${index}`)
-    loTempE.innerHTML = `${Math.round(dailyForecast.temp.min)} ° F`
+    loTempE.innerHTML = `${Math.round(dailyForecast.temp.min)}° F`
 
     // Sunrise & Sunset
     const sunriseE = document.querySelector(`#sunriseE${index}`)
