@@ -186,8 +186,8 @@ const getWeatherForecast = (data) => {
                         <p id="windE${index}" class="mb-0"></p>
                     </div>
                     <div class="d-flex gap-2 text-start">
-                        <p id="sunriseE${index}" class="d-flex gap-1 mb-0"></p>
-                        <p id="sunsetE${index}" class="d-flex gap-1 mb-0"></p>
+                        <p id="sunriseE${index}" class="d-flex gap-1 mb-0 pt-2"></p>
+                        <p id="sunsetE${index}" class="d-flex gap-1 mb-0 pt-2"></p>
                     </div>
                 </div>
             </div>
