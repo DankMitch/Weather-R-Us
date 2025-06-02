@@ -165,13 +165,13 @@ const getWeatherForecast = (data) => {
                     <p id="dayE${index}" class="mb-3"></p>
                 </div>
             </div>
-            <div class="row align-items-stretch text-center px-0 mx-0">
+            <div class="row align-items-stretch text-center g-0">
                 <div class="col-2 d-flex flex-column justify-content-between align-items-center">
                         <div id="iconE${index}" class="mx-auto"></div>
                         <div id="precipE${index}" class="blue" alt="rain icon"></div>
                 </div>
                 <div class="col-4 d-flex flex-column justify-content-between">
-                    <div>
+                                        <div>
                         <p id="currentTempE${index}" class="display-4 mb-2"></p>
                     </div>
                     <div class="d-flex justify-content-center gap-1">
@@ -181,11 +181,11 @@ const getWeatherForecast = (data) => {
                     </div>
                 </div>
                 <div class="col-6 d-flex flex-column justify-content-between">
-                    <div>
+                    <div class="text-start">
                         <p id="humidityE${index}" class="mb-2"></p>
                         <p id="windE${index}" class="mb-0"></p>
                     </div>
-                    <div class="d-flex gap-2 justify-content-center">
+                    <div class="d-flex gap-2 text-start">
                         <p id="sunriseE${index}" class="d-flex gap-1 mb-0"></p>
                         <p id="sunsetE${index}" class="d-flex gap-1 mb-0"></p>
                     </div>
