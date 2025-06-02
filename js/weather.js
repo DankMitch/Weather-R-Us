@@ -159,38 +159,38 @@ const getWeatherForecast = (data) => {
     data.list.forEach((dailyForecast, index) => {
     const forecastHTML = `                      
         <div class="border-top border-2 border-white py-5">
-    <div class="row">
-        <div class="col-12 text-start">
-            <p id="dayE${index}"></p>
-        </div>
-    </div>
-    <div class="row text-center">
-        <div class="col-2">
-            <div id="iconE${index}" class="mx-auto"></div>
-            <p id="precipE${index}" class="blue pt-4" alt="rain icon"></p>
-        </div>
-
-        <div class="col-4">
-            <p id="currentTempE${index}" class="display-2"></p>
-            <div class="d-flex justify-content-center gap-1">
-                <p id="hiTempE${index}" class='red'></p>
-                <p>|</p>
-                <p id="loTempE${index}" class="blue"></p>
+            <div class="row">
+                <div class="col-12 text-start">
+                    <p id="dayE${index}"></p>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-2">
+                    <div id="iconE${index}" class="mx-auto"></div>
+                    <p id="precipE${index}" class="blue pt-4" alt="rain icon"></p>
+                </div>
+            
+                <div class="col-4">
+                    <p id="currentTempE${index}" class="display-2"></p>
+                    <div class="d-flex justify-content-center gap-1">
+                        <p id="hiTempE${index}" class='red'></p>
+                        <p>|</p>
+                        <p id="loTempE${index}" class="blue"></p>
+                    </div>
+                </div>
+            
+                <div class="col-6 d-flex flex-column justify-content-center align-items-center">
+                    <div>
+                        <p id="humidityE${index}"></p>
+                        <p id="windE${index}"></p>
+                    </div>
+                    <div class="d-flex gap-2 justify-content-center">
+                        <p id="sunriseE${index}" class="d-flex gap-1"></p>
+                        <p id="sunsetE${index}" class="d-flex gap-1"></p>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <div class="col-6 d-flex flex-column justify-content-center align-items-center">
-            <div>
-                <p id="humidityE${index}"></p>
-                <p id="windE${index}"></p>
-            </div>
-            <div class="d-flex gap-2 justify-content-center">
-                <p id="sunriseE${index}" class="d-flex gap-1"></p>
-                <p id="sunsetE${index}" class="d-flex gap-1"></p>
-            </div>
-        </div>
-    </div>
-</div>
     `   
     forecast.insertAdjacentHTML('beforeend', forecastHTML)
 
